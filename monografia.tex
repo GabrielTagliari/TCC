@@ -1,0 +1,216 @@
+\input{preambulo}
+
+% ---- compila o índice  ----
+\makeindex
+\makenomenclature
+% ---
+
+\newcommand{\sol}{\mathcal{R}}
+\newcommand{\vei}{\rho}
+\newcommand{\nInst}{100}
+\newcommand{\depo}{\pi}
+\newcommand{\Lum}{lengthR}
+\newcommand{\Ldo}{length}
+\newcommand{\maxL}{MAX\_\Lum}
+\newcommand{\minC}{MIN\_SIZE_\vei}
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+
+% ---- Início do documento ----
+\begin{document}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing
+
+% ---- ELEMENTOS PRÉ-TEXTUAIS ----
+\pretextual
+
+\pagenumbering{roman}
+
+% --- Capa ---
+\imprimircapa
+% ---
+
+
+\setcounter{page}{3}
+\imprimirfolhaderosto*
+% ---
+
+\newpage
+\thispagestyle{empty}
+\null\vfill
+
+% ********** Ficha Catalográfica
+\begin{scriptsize}
+\begin{center}
+\def\arraystretch{0.9}
+\begin{tabular}{|cl|} \hline
+\hspace{0.7cm} & \\&Rodrigo, Gabriel Tagliari; Hofart, Matheus Silva; Pereira,\\ & Elisa Battaglini Domingues.\\&\\ & \hspace{0.6cm} INFOBEACONS/ por Gabriel Tagliari Rodrigo, Matheus\\& Silva Hofart, Elisa Battaglini Domingues Pereira. 2016.\\& \hspace{0.6cm}25f.; 29,7cm. \\&\\ & \hspace{0.6cm} Trabalho de Conclusão de Curso - UNASP-EC - Centro\\& Universitário Adventista de São Paulo - Engenheiro Coelho,\\& 2016.\\& \hspace{0.6cm}''Orientação: Prof. Dr. Roberto Sussumu Wataya''\\ & \\ 
+& \hspace{0.6cm} 1. Beacons. 2. Informações. 3. Acessibilidade. I. Título \\ & \\ \hline
+\end{tabular}
+\end{center}
+\end{scriptsize}
+
+% --- --- --- ---
+
+\newpage
+\vspace*{\fill}
+\begin{center}
+    {Trabalho de Conclusão de Curso do Centro Universitário Adventista de São Paulo, do curso
+    de Sistemas para Internet apresentado e aprovado em 22 de Novembro de 2016.}
+\end{center}
+\vspace{8mm}
+\begin{center}
+    {\line(1,0){250}
+	\par
+	Dr. \imprimirorientador    
+    }
+\end{center}
+\vspace{5mm}
+\begin{center}
+    {\line(1,0){250}
+	\par
+	Me. Percival Lucena    
+    }
+\end{center}
+\vspace{5mm}
+\begin{center}
+    {\line(1,0){250}
+	\par
+	Me. Thales de Társis Cezare    
+    }
+\end{center}
+\vspace*{\fill}
+\newpage
+% --- --- ---
+\cleardoublepage
+
+% --- Agradecimentos ---
+\begin{agradecimentos}
+	\begin{itemize}
+		\item Ao Prof. Dr. Roberto Sussumu Wataya  que nos auxiliou nas etapas do processo de desenvolvimento do projeto.
+		\item Ao Prof. Me. Percival Lucena que esteve sempre disposto a nos ajudar.
+		\item Aos amigos e familiares pelo constante apoio.
+	\end{itemize}
+\end{agradecimentos}
+% ---
+
+\begin{epigrafe}
+    \vspace*{\fill}
+	\begin{flushright}
+		\textit{''As pessoas não sabem o que querem, até mostrarmos a elas''\\
+		(Steve Jobs)}
+	\end{flushright}
+\end{epigrafe}
+% ---
+
+\begin{resumo}
+\vspace{8mm}
+    Conforme o tempo passa, notamos que as formas de se obter informações evoluem, a necessidade de se manter informado é grande. As pessoas buscam formas diferentes, rápidas e mais fáceis de conhecer e entender o que está a sua volta. O projeto tem por objetivo trazer às pessoas as informações necessárias do que lhes é exposto nos museus através de seus aparelhos \textit{android} que lêem as informações cadastradas nos \textit{beacons} de cada obra. Com o aplicativo aberto, ao aproximar o \textit{smartphone} ou \textit{tablet} serão exibidas as informações cadastradas para aquele determinado \textit{beacon} mais próximo encontrado pelo \textit{bluetooth} do dispositivo. Este aplicativo foi criado para atender essa necessidade de informação e principalmente de acessibilidade. Foi inspirado em projetos já existentes, porém diferentes, mas que trazem a mesma ideia de facilitar o acesso à informação. As tecnologias utilizadas para a criação do projeto foram \textit{Java, Android, Volley, HTML5, CSS3, Spring, Hibernate, Bootstrap} e \textit{MySQL}. 
+    \vspace{\onelineskip}
+
+    \noindent\textbf{Palavras-chaves}: \textit{Beacons}; Informações; Acessibilidade.
+
+    \vspace{\onelineskip}
+    \vspace{\onelineskip}
+
+	\newpage
+
+    \begin{otherlanguage*}{english}
+    \begin{center}{\ABNTEXchapterfont\huge Abstract}\end{center} As time goes by, we note that the way to obtain information evolves, it’s important to keep informed. What people seek are different, fastest and simple ways to know and understand what is around them. The project aims to bring people the necessary information that are displayed in museums through their Android devices that read the information registered for beacons of each work of art. With the app open, when approaching the smartphone or tablet, the information recorded for the nearest beacon find by bluetooth are displayed on the device screen. This app was created to attend the information needed and mostly the accessibility. It was inspired in existing projects, but different, it reflects the same idea to facilitate the information access. The technologies used for the creation of the project were Java, Android, Volley, HTML5, CSS3, Spring, Hibernate, Bootstrap and MySQL.
+    
+    \vspace{\onelineskip}
+
+    \noindent\textbf{Keywords}: Beacons; Information; Accessibility.
+
+    \end{otherlanguage*}
+\end{resumo}
+% ---
+
+
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+
+\cleardoublepage
+% ---
+
+% --- Dedicatória ---
+%\begin{dedicatoria}
+%    \vspace*{\fill}
+%	 \centering
+%	 \noindent
+%	 \textit{Aos meus pais.}
+%	 \vspace*{\fill}
+%\end{dedicatoria}
+% ---
+\renewcommand{\listfigurename}{Lista de Figuras}
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+%\cleardoublepage
+% ---
+
+% --- inserir lista de tabelas ---
+\newpage
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+%\cleardoublepage
+% ---
+
+
+\renewcommand{\nomname}{Lista de Acrônimos e Abreviaçães}
+\pdfbookmark[0]{\nomname}{las}
+\printnomenclature
+\cleardoublepage
+% ---
+
+\pagenumbering{arabic}
+
+% ---- ELEMENTOS TEXTUAIS ----
+\textual
+
+
+
+\include{cap1}
+\include{cap2}
+\include{cap4}
+\include{cap3}
+
+%\chapter{Estudos e viabilidades}
+%Foram analisados os resultados obtidos nos testes de funcionamento do aplicativo, com a finalidade de garantir que os objetivos estabelecidos foram atendidos, dentro dos níveis esperados.
+%Portanto, o objetivo deste trabalho foi criar um aplicativo com [...]
+
+\include{cap5}
+
+\bookmarksetup{startatroot}%
+
+
+\postextual
+
+
+\bibliography{tese}
+
+
+
+%\begin{apendicesenv}
+
+%\partapendices
+%
+%\include{apendiceA}
+%\include{apendiceB}
+%
+%\end{apendicesenv}
+%
+%% ---- Anexos ----
+%\begin{anexosenv}
+%
+%\partanexos
+%
+%\include{anexoA}
+%\include{anexoB}
+%
+%\end{anexosenv}
+
+% ---- INDICE REMISSIVO ----
+\printindex
+
+\end{document} 
